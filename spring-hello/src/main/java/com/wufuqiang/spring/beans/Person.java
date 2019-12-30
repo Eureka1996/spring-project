@@ -8,13 +8,13 @@ import lombok.ToString;
 /**
  * @ author wufuqiang
  **/
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Car {
-    private String brand;
-    private String corp;
-    private int price;
-    private double maxSpeed;
+public class Person {
+    private String name;
+    private int age;
+    private Car car;
 }

@@ -23,4 +23,24 @@
         </constructor-arg>
     </bean>
 
+    <bean id="person1" class="com.wufuqiang.spring.beans.Person">
+        <property name="name" value="wufuqiang"></property>
+        <property name="age" value="12"></property>
+        <property name="car" ref="car"></property>
+        <property name="car.maxSpeed" value="234.56"></property>
+    </bean>
+
+    <bean id="person2" class="com.wufuqiang.spring.beans.Person">
+        <property name="name" value="maoyujiao"></property>
+        <property name="age" value="16"></property>
+        <property name="car">
+            <bean class="com.wufuqiang.spring.beans.Car">
+                <property name="brand" value="ford"></property>
+                <property name="corp" value="changan"></property>
+                <property name="price" value="3456789"></property>
+                <property name="maxSpeed" value="35.67"></property>
+            </bean>
+        </property>
+    </bean>
+
 </beans>
