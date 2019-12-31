@@ -23,10 +23,18 @@
         </constructor-arg>
     </bean>
 
+    <bean id="car2" class="com.wufuqiang.spring.beans.Car">
+        <property name="brand" value="dazhong"></property>
+        <property name="corp" value="shanghai"></property>
+        <property name="maxSpeed" value="345"></property>
+        <property name="price" value="100000"></property>
+    </bean>
+
     <bean id="person1" class="com.wufuqiang.spring.beans.Person">
         <property name="name" value="wufuqiang"></property>
         <property name="age" value="12"></property>
         <property name="car" ref="car"></property>
+        <!--级联属性，注意：属性需要 先初始化后才可以为级联属性赋值，否则会有异常-->
         <property name="car.maxSpeed" value="234.56"></property>
     </bean>
 
@@ -40,6 +48,17 @@
                 <property name="price" value="3456789"></property>
                 <property name="maxSpeed" value="35.67"></property>
             </bean>
+        </property>
+    </bean>
+
+    <bean id="person3" class="com.wufuqiang.spring.beans.SuperPerson">
+        <property name="name" value="wufq"></property>
+        <property name="age" value="30"></property>
+        <property name="cars">
+            <list>
+                <ref bean="car"/>
+                <ref bean="car2"/>
+            </list>
         </property>
     </bean>
 
