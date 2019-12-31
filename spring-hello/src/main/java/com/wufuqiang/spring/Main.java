@@ -23,12 +23,14 @@ public class Main {
         SuperPerson person3 = (SuperPerson)ioc.getBean("person3");
         MapPerson mapperson = (MapPerson) ioc.getBean("mapperson");
         DataSource dataSource = (DataSource) ioc.getBean("dataSource");
+        SuperPerson person4 = (SuperPerson) ioc.getBean("person4");
         System.out.println(car);
         System.out.println(person1);
         System.out.println(person2);
         System.out.println(person3);
         System.out.println(mapperson);
         System.out.println(dataSource);
+        System.out.println(person4);
 
 
 //        System.out.println("name:"+helloWorld.hello());

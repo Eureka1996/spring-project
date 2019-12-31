@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <!--
         配置bean
@@ -82,6 +82,22 @@
                 <prop key="driverClass">com.mysql.jdbc.Driver</prop>
             </props>
         </property>
+    </bean>
+
+    <util:list id="carList">
+        <ref bean="car" />
+        <bean class="com.wufuqiang.spring.beans.Car">
+            <property name="brand" value="ford"></property>
+            <property name="corp" value="changan"></property>
+            <property name="price" value="3456789"></property>
+            <property name="maxSpeed" value="35.67"></property>
+        </bean>
+    </util:list>
+
+    <bean id="person4" class="com.wufuqiang.spring.beans.SuperPerson">
+        <property name="name" value="xiaokeai"></property>
+        <property name="age" value="15"></property>
+        <property name="cars" ref="carList"></property>
     </bean>
 
 </beans>
