@@ -71,7 +71,17 @@
                 <entry key="BB" value-ref="car2"></entry>
             </map>
         </property>
+    </bean>
 
+    <bean id="dataSource" class="com.wufuqiang.spring.beans.DataSource">
+        <property name="properties">
+            <props>
+                <prop key="user">root</prop>
+                <prop key="password">123456</prop>
+                <prop key="jdbcUrl">jdbc:mysql:///test</prop>
+                <prop key="driverClass">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
     </bean>
 
 </beans>
