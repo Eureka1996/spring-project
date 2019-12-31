@@ -62,4 +62,16 @@
         </property>
     </bean>
 
+    <bean id="mapperson" class="com.wufuqiang.spring.beans.MapPerson">
+        <property name="name" value="maoyj"></property>
+        <property name="age" value="12"></property>
+        <property name="mapCars">
+            <map>
+                <entry key="AA" value-ref="car"></entry>
+                <entry key="BB" value-ref="car2"></entry>
+            </map>
+        </property>
+
+    </bean>
+
 </beans>
