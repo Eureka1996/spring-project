@@ -13,7 +13,9 @@ public class Demo02 {
         ApplicationContext ioc = new ClassPathXmlApplicationContext("beans-autowire.xml");
         NewPerson person = (NewPerson) ioc.getBean("newperson");
         Address address2 = (Address) ioc.getBean("address2");
+        NewPerson newperson2 = (NewPerson) ioc.getBean("newperson2");
         System.out.println(person);
         System.out.println(address2);
+        System.out.println(newperson2);
     }
 }

@@ -11,5 +11,8 @@
     <bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" autowire="byName"></bean>
 
     <bean id="address2" class="com.wufuqiang.spring.beans.Address" p:street="houchangcun" parent="address"></bean>
+    <bean id="address3" class="com.wufuqiang.spring.beans.Address" p:city="ShangHai" p:street="nanjinglu" abstract="true"></bean>
+
+    <bean id="newperson2" class="com.wufuqiang.spring.beans.NewPerson" p:name="WUFQ" p:address-ref="address2" depends-on="car" scope="prototype"></bean>
 
 </beans>
