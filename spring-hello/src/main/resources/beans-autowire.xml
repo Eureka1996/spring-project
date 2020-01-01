@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:db.properties"></context:property-placeholder>
 
     <bean id="address" class="com.wufuqiang.spring.beans.Address" p:city="beijing" p:street="huilongguan"></bean>
     <bean id="car" class="com.wufuqiang.spring.beans.Car" p:brand="huangguan" p:corp="riben" p:maxSpeed="250" p:price="25000"></bean>
@@ -12,7 +13,10 @@
 
     <bean id="address2" class="com.wufuqiang.spring.beans.Address" p:street="houchangcun" parent="address"></bean>
     <bean id="address3" class="com.wufuqiang.spring.beans.Address" p:city="ShangHai" p:street="nanjinglu" abstract="true"></bean>
+    <bean id="address4" class="com.wufuqiang.spring.beans.Address" p:city="${user}" p:street="${password}"></bean>
 
     <bean id="newperson2" class="com.wufuqiang.spring.beans.NewPerson" p:name="WUFQ" p:address-ref="address2" depends-on="car" scope="prototype"></bean>
+
+
 
 </beans>
