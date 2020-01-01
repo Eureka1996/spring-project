@@ -11,7 +11,8 @@ public class Demo03_BeanFromFactory {
     public static void main(String[] args) {
         ApplicationContext ioc = new ClassPathXmlApplicationContext("beans-factory.xml");
         Car car = (Car) ioc.getBean("car");
+        Car car2 = (Car) ioc.getBean("car2");
         System.out.println(car);
-
+        System.out.println(car2);
     }
 }

@@ -14,4 +14,10 @@
         <constructor-arg value="biyadi"></constructor-arg>
     </bean>
 
+    <bean id="carFactory" class="com.wufuqiang.spring.factory.InstanceCarFactory"></bean>
+
+    <bean id="car2" factory-bean="carFactory" factory-method="getCar">
+        <constructor-arg value="ford"></constructor-arg>
+    </bean>
+
 </beans>
