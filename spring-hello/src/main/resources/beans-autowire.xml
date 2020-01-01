@@ -10,4 +10,6 @@
     <!--<bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" p:address-ref="address" p:car-ref="car"></bean>-->
     <bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" autowire="byName"></bean>
 
+    <bean id="address2" class="com.wufuqiang.spring.beans.Address" p:street="houchangcun" parent="address"></bean>
+
 </beans>
