@@ -12,7 +12,9 @@ public class Demo03_BeanFromFactory {
         ApplicationContext ioc = new ClassPathXmlApplicationContext("beans-factory.xml");
         Car car = (Car) ioc.getBean("car");
         Car car2 = (Car) ioc.getBean("car2");
+        Car car3 = (Car) ioc.getBean("car3");
         System.out.println(car);
         System.out.println(car2);
+        System.out.println(car3);
     }
 }
