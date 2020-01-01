@@ -17,4 +17,12 @@ public class Car {
     private String corp;
     private int price;
     private double maxSpeed;
+
+    public void init(){
+        System.out.println("init car.");
+    }
+
+    public void destroy(){
+        System.out.println("destroy car");
+    }
 }

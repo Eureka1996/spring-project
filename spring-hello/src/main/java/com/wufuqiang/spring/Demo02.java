@@ -19,5 +19,6 @@ public class Demo02 {
         System.out.println(address2);
         System.out.println(newperson2);
         System.out.println(address4);
+        ((ClassPathXmlApplicationContext)ioc).close();
     }
 }

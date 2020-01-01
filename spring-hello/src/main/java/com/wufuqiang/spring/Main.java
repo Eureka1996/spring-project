@@ -32,7 +32,7 @@ public class Main {
         System.out.println(dataSource);
         System.out.println(person4);
 
-
+        ((ClassPathXmlApplicationContext)ioc).close();
 //        System.out.println("name:"+helloWorld.hello());
 
     }

@@ -7,7 +7,9 @@
     <context:property-placeholder location="classpath:db.properties"></context:property-placeholder>
 
     <bean id="address" class="com.wufuqiang.spring.beans.Address" p:city="beijing" p:street="huilongguan"></bean>
-    <bean id="car" class="com.wufuqiang.spring.beans.Car" p:brand="huangguan" p:corp="riben" p:maxSpeed="250" p:price="25000"></bean>
+    <bean id="car" class="com.wufuqiang.spring.beans.Car"
+          p:brand="huangguan" p:corp="riben" p:maxSpeed="250" p:price="25000"
+          init-method="init" destroy-method="destroy"></bean>
     <!--<bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" p:address-ref="address" p:car-ref="car"></bean>-->
     <bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" autowire="byName"></bean>
 
@@ -17,6 +19,6 @@
 
     <bean id="newperson2" class="com.wufuqiang.spring.beans.NewPerson" p:name="WUFQ" p:address-ref="address2" depends-on="car" scope="prototype"></bean>
 
-
+    <bean class="com.wufuqiang.spring.processor.MyBeanPostProcessor"></bean>
 
 </beans>
