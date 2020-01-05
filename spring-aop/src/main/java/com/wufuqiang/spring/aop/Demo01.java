@@ -15,5 +15,7 @@ public class Demo01 {
         AtithmeticCalculator calculator = (AtithmeticCalculator) ioc.getBean("atithmeticCalculatorImpl");
         int result = calculator.add(4,5);
         System.out.println(result);
+        System.out.println("------------------");
+        System.out.println(calculator.div(4,0));
     }
 }
