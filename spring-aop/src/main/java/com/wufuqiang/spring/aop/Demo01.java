@@ -16,6 +16,6 @@ public class Demo01 {
         int result = calculator.add(4,5);
         System.out.println(result);
         System.out.println("------------------");
-        System.out.println(calculator.div(4,0));
+        System.out.println(calculator.div(4,2));
     }
 }
