@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AtithmeticCalculatorImpl implements AtithmeticCalculator {
     public int add(int i, int j) {
+        System.out.println("add");
         int result = i + j;
         return result;
     }
