@@ -9,17 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-hello</artifactId>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
-        <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.2</version>
-        </dependency>
-
-    </dependencies>
+    <artifactId>spring-annotation</artifactId>
 
 
 </project>
