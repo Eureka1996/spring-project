@@ -18,7 +18,14 @@
     -->
     <bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" autowire="byName"></bean>
 
+    <!--
+        bean配置的继承：使用bean的parent属性指定继承哪个bean的配置
+    -->
     <bean id="address2" class="com.wufuqiang.spring.beans.Address" p:street="houchangcun" parent="address"></bean>
+
+    <!--抽象bean：bean的abstract属性为true的bean。这样的bean不能被IOC容器实例化，只用来被继承配置
+        若某一个bean的class属性没有指定，则该bean必须是一个抽象bean
+    -->
     <bean id="address3" class="com.wufuqiang.spring.beans.Address" p:city="ShangHai" p:street="nanjinglu" abstract="true"></bean>
     <bean id="address4" class="com.wufuqiang.spring.beans.Address" p:city="${user}" p:street="${password}"></bean>
 
