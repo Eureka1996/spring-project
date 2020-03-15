@@ -11,6 +11,11 @@
           p:brand="huangguan" p:corp="riben" p:maxSpeed="250" p:price="25000"
           init-method="init" destroy-method="destroy"></bean>
     <!--<bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" p:address-ref="address" p:car-ref="car"></bean>-->
+    <!--
+        可以使用autowire属性指定自动装配的方式
+        byName根据bean容器的名字和当前bean的setter风格的属性名进行自动装配，若有则匹配。
+        byType根据bean的类型和当前bean的属性的类型进行自动装配。若ioc容器中有1个以上的类型匹配的bean，则抛异常。
+    -->
     <bean id="newperson" class="com.wufuqiang.spring.beans.NewPerson" p:name="Mr.Wu" autowire="byName"></bean>
 
     <bean id="address2" class="com.wufuqiang.spring.beans.Address" p:street="houchangcun" parent="address"></bean>
